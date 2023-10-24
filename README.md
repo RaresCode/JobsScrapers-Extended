@@ -3,6 +3,8 @@
 
 This project aims to streamline the process of gathering job details, including job title, city, country, and link, and subsequently integrating them into the peviitor.ro. This initiative leverages the power of Python and incorporates essential libraries like bs4 (Beautiful Soup) and requests for web scraping.
 
+In addition to web scraping, this project also utilizes Selenium for web automation. The test results are logged, and HTML reports are generated to provide comprehensive insights.
+
 ## Objectives
 
 This project encompasses the following primary objectives:
@@ -19,7 +21,9 @@ The project incorporates the following key features:
 
 - BeautifulSoup4 (bs4): A Python library for web scraping purposes, allowing for efficient extraction of data from HTML and XML files.
 - Requests: A popular Python library for making HTTP requests, essential for fetching web page content.
-- GitHub Actions: Enables automated workflows directly from GitHub repositories, in this context, ensuring regular updates of job listings.
+- Selenium: Used for web automation, enhancing the capabilities of data extraction.
+- Logging: Test results are logged to provide a record of execution.
+- HTML Reporting: Comprehensive reports are generated for detailed insights into the scraping process.
 - Pytest: A testing framework for Python that facilitates efficient and scalable testing.
 - API Testing: In-depth testing of APIs to guarantee data accuracy and reliability.
 - Multiple Assertions: Rigorous validation of multiple data points to ensure comprehensive accuracy.
