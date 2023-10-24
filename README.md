@@ -31,7 +31,7 @@ The project incorporates the following key features:
 
 For detailed insights into the test results, an HTML report is generated, providing a comprehensive overview of the scraping process.
 
-![selenium run](https://github.com/RaresCode/JobsScrapers-Extended/assets/91252395/a91e9e9d-9fbf-4fc9-9df5-a5e04f4b159f)
+![selenium run](https://github.com/RaresCode/JobsScrapers-Extended/assets/91252395/3d47ff4e-d344-4c97-9cdb-40594ee19cfc)
 
 ## Setup
 
