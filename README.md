@@ -11,8 +11,6 @@ This project encompasses the following primary objectives:
 
 - Enhanced Accessibility: Facilitate easier access to job listings for a wider audience by extracting data from various company websites and seamlessly integrating it into peviitor.ro.
 
-- Automated Data Refresh: Integrate scrapers into GitHub Actions for scheduled, daily execution, ensuring that the job listings remain current and reliable.
-
 - Data Validation Testing: Conduct thorough testing of the scrapers to validate that the scraped data aligns precisely with the information available on peviitor.ro.
 
 ## Features
