@@ -27,6 +27,10 @@ The project incorporates the following key features:
 - Multiple Assertions: Rigorous validation of multiple data points to ensure comprehensive accuracy.
 - Data Validation: The project emphasizes the importance of verifying scraped data against the information available on peviitor.ro.
 
+## Selenium Test Run without parallelism
+
+[https://github.com/RaresCode/JobsScrapers-Extended/assets/91252395/392424e9-9238-497d-9ba6-5e829426cb38](https://github-production-user-asset-6210df.s3.amazonaws.com/91252395/278068483-392424e9-9238-497d-9ba6-5e829426cb38.mp4)
+
 ## HTML Report
 
 For detailed insights into the test results, an HTML report is generated, providing a comprehensive overview of the scraping process.
