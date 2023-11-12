@@ -1,4 +1,3 @@
-import uuid
 from sites.setup_api import UpdatePeviitorAPI
 from sites.update_logo import update_logo
 import json
@@ -18,13 +17,7 @@ class WebsiteScraperAPI:
         self.logo_url = company_logo_url
         self.URL = url
         self.formatted_data = []
-
-    # def set_request_headers(self, headers):
-    #     """
-    #     Set the request headers.
-    #     """
-    #     self.headers = headers
-
+        
     def get_jobs_response(self, response):
         """
         Retrieve the response.
@@ -50,17 +43,19 @@ class WebsiteScraperAPI:
             
         return job_details
 
-    def create_jobs_dict(self, job_title, job_url, job_country, job_city):
+    def create_jobs_dict(self, job_title, job_url, job_country, job_city, county=None, remote='On-site'):
         """
         Create the job dictionary for the future api
         """
         self.formatted_data.append({
-            "id": str(uuid.uuid4()),
             "job_title": job_title,
             "job_link": job_url,
             "company": self.company_name,
             "country": job_country,
-            "city": job_city
+            "county": county,
+            "city": job_city,
+            "remote": remote
+            
         })
 
     def send_to_viitor(self):

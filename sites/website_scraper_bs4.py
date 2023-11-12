@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 from sites.setup_api import UpdatePeviitorAPI
 from sites.update_logo import update_logo
 from math import ceil
-import uuid
 import json
 
 
@@ -31,9 +30,9 @@ class BS4Scraper:
 
     def get_content(self, url):
         self._set_headers()
-        # Ignoring ssl cert check
-        # response = requests.get(url, headers=self.DEFAULT_HEADERS, verify=False)
-        response = requests.get(url, headers=self.DEFAULT_HEADERS)
+        # Ignoring ssl cert check as many websites don't update it
+        response = requests.get(url, headers=self.DEFAULT_HEADERS, verify=False)
+        # response = requests.get(url, headers=self.DEFAULT_HEADERS)
         self.soup = BeautifulSoup(response.content, 'lxml')
 
 
@@ -67,17 +66,19 @@ class BS4Scraper:
         element = self.soup.find(element_locator, element)
         return element.text if element else None
 
-    def create_jobs_dict(self, job_title, job_url, job_country, job_city):
+    def create_jobs_dict(self, job_title, job_url, job_country, job_city, county=None, remote='On-site'):
         """
         Create the job dictionary for the future api
         """
         self.formatted_data.append({
-            "id": str(uuid.uuid4()),
             "job_title": job_title,
             "job_link": job_url,
             "company": self.company_name,
             "country": job_country,
-            "city": job_city
+            "county": county,
+            "city": job_city,
+            "remote": remote
+            
         })
 
     def send_to_viitor(self):
@@ -88,3 +89,10 @@ class BS4Scraper:
         api_load()
         update_logo(self.company_name, self.logo_url)
         print(json.dumps(self.formatted_data, indent=4, sort_keys=True))
+
+        # don't delete this lines if you want to see the graph on scraper's page
+        file = self.company_name.lower() + '.py'
+        data = {'data': len(self.formatted_data)}
+        dataset_url = f'https://dev.laurentiumarian.ro/dataset/JobsScrapers/{file}/'
+        requests.post(dataset_url, json=data)
+        ########################################################
