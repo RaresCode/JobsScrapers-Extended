@@ -27,7 +27,7 @@ module_names = {
             'oradeatechhub': 'oradeatechhubScraper',
             'panifcom': 'panifcomScraper',
             'nolimits': 'NolimitsScraper',
-            'nokia': 'nokiaScraper',
+            # 'nokia': 'nokiaScraper',
             'nielseniq': 'nielseniqScraper',
             # 'netrom': 'NetromScraper', 
             # 'nagarro': 'NagarroScraper',
