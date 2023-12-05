@@ -23,7 +23,7 @@ The project incorporates the following key features:
 - Logging: Test results are logged to provide a record of execution.
 - HTML Reporting: Comprehensive reports are generated for detailed insights into the scraping process.
 - Pytest: A testing framework for Python that facilitates efficient and scalable testing.
-- API Testing: In-depth testing of APIs to guarantee data accuracy and reliability.
+- API Testing: In-depth testing of API Responses to increase data accuracy and reliability.
 - Multiple Assertions: Rigorous validation of multiple data points to ensure comprehensive accuracy.
 - Data Validation: The project emphasizes the importance of verifying scraped data against the information available on peviitor.ro.
 
