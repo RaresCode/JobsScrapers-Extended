@@ -21,7 +21,7 @@ The project incorporates the following key features:
 - Requests: A popular Python library for making HTTP requests, essential for fetching web page content.
 - Selenium: Used for web automation, enhancing the capabilities of data extraction.
 - Logging: Test results are logged to provide a record of execution.
-- HTML Reporting: Comprehensive reports are generated for detailed insights into the scraping process.
+- HTML Reporting: Comprehensive reports are generated for detailed insights of the testing process execution
 - Pytest: A testing framework for Python that facilitates efficient and scalable testing.
 - API Testing: In-depth testing of API Responses to increase data accuracy and reliability.
 - Multiple Assertions: Rigorous validation of multiple data points to ensure comprehensive accuracy.
